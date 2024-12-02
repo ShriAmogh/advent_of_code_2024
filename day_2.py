@@ -3,14 +3,14 @@ def find_count(n_list):
     decreasing_count = 0
     safe_count = 0
     
-    is_increasing = all(n_list[i] < n_list[i + 1] for i in range(len(n_list) - 1))
+    increasing = all(n_list[i] < n_list[i + 1] for i in range(len(n_list) - 1))
     
-    is_decreasing = all(n_list[i] > n_list[i + 1] for i in range(len(n_list) - 1))
+    decreasing = all(n_list[i] > n_list[i + 1] for i in range(len(n_list) - 1))
 
     diff = all(abs(n_list[i] - n_list[i + 1]) in {1, 2, 3} for i in range(len(n_list) - 1))
     
 
-    if is_increasing or is_decreasing:
+    if increasing or decreasing:
         if diff:
             safe_count += 1  
     else:
