@@ -26,7 +26,7 @@ def find_count(n_list):
     emp_list = []
     safe_count = 0
     unsafe_count = 0
-    diff = [1,3]
+    diff = [1,2,3]
     for i in range(len(n_list) - 1): 
         difference = abs(n_list[i] - n_list[i + 1])
         if difference in diff:
